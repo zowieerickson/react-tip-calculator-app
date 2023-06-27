@@ -23,7 +23,7 @@ export function Bill() {
 
     function calculateTotalPrice() {
         if (bill > 0 && peopleCount > 0) {
-            return bill / peopleCount
+            return (bill / peopleCount).toFixed(2)
         }
 
         if (bill > 0 && peopleCount == 0) {
