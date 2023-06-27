@@ -4,16 +4,21 @@ import Total from "./Total"
 
 
 export function Bill() {
-    const [bill, setBill] = useState(0)
+    const [bill, setBill] = useState('')
     const [peopleCount, setPeopleCount] = useState(1)
 
+    const regexNumber = /^[0-9\b]+$/;
 
     function handleBillChange(e) {
-        setBill(e.target.value)
+        if (e.target.value === "" || regexNumber.test(e.target.value)) {
+            setBill(e.target.value);
+        }
     }
 
     function handlePeopleCountChange(e) {
-        setPeopleCount(e.target.value)
+        if (e.target.value === "" || regexNumber.test(e.target.value)) {
+            setPeopleCount(e.target.value)
+        }
     }
 
     function calculateTotalPrice() {
@@ -32,8 +37,8 @@ export function Bill() {
             <h3>Bill</h3>
             <input 
                 onChange={handleBillChange}
-                type="number"
-                pattern="[0-9]*"
+                value={bill}
+                type="text"
                 name=""
                 id="" 
             />
@@ -41,9 +46,8 @@ export function Bill() {
             <h3>Number of People</h3>
             <input 
                 onChange={handlePeopleCountChange} 
-                type="number"
+                type="text"
                 value={peopleCount}
-                pattern="[0-9]*" 
                 name="" 
                 id="" 
             />
