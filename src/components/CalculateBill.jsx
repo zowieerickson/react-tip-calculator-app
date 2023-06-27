@@ -17,9 +17,12 @@ export function Bill() {
     }
 
     function calculateTotalPrice() {
-        console.log(peopleCount)
         if (bill > 0 && peopleCount > 0) {
             return bill / peopleCount
+        }
+
+        if (bill > 0 && peopleCount == 0) {
+            return bill
         }
 
     }
@@ -27,10 +30,23 @@ export function Bill() {
     return (
         <div>
             <h3>Bill</h3>
-            <input onChange={handleBillChange} type="text" name="" id="" />
+            <input 
+                onChange={handleBillChange}
+                type="number"
+                pattern="[0-9]*"
+                name=""
+                id="" 
+            />
             {/* Beginning of People Count: Module */}
             <h3>Number of People</h3>
-            <input onChange={handlePeopleCountChange} type="text" name="" id="" />
+            <input 
+                onChange={handlePeopleCountChange} 
+                type="number"
+                value={peopleCount}
+                pattern="[0-9]*" 
+                name="" 
+                id="" 
+            />
             <p>{peopleCount} people</p>
             {/* End of People Count: Module */}
             <Total 
