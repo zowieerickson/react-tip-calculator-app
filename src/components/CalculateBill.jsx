@@ -2,7 +2,6 @@ import { useState } from "react"
 import Total from "./Total"
 
 
-
 export function Bill() {
     const [bill, setBill] = useState('')
     const [peopleCount, setPeopleCount] = useState(1)
@@ -29,7 +28,6 @@ export function Bill() {
         if (bill > 0 && peopleCount == 0) {
             return bill
         }
-
     }
 
     return (
@@ -42,7 +40,16 @@ export function Bill() {
                 name=""
                 id="" 
             />
-            {/* Beginning of People Count: Module */}
+            {/* Beginning of Tip Module */}
+            <h3>Select Tip %</h3>
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            {/* End of Tip Module */}
+            {/* Beginning of People Count Module */}
+            
             <h3>Number of People</h3>
             <input 
                 onChange={handlePeopleCountChange} 
@@ -52,7 +59,7 @@ export function Bill() {
                 id="" 
             />
             <p>{peopleCount} people</p>
-            {/* End of People Count: Module */}
+            {/* End of People Count Module */}
             <Total 
             totalPrice={calculateTotalPrice()}
             />
