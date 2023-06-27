@@ -1,9 +1,9 @@
-export default function Total() {
+export default function Total({ totalPrice }) {
     return (
         <div>
             <h3>Total</h3>
             <p>/ person</p>
-            <p>$32.79</p>
+            <p>${totalPrice}</p>
         </div>
     )
 }

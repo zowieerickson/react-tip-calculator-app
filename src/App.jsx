@@ -6,7 +6,8 @@ import SelectTip from './components/SelectTip'
 import NumberOfPeople from './components/NumberOfPeople'
 import TipAmount from './components/TipAmount'
 import Total from './components/Total'
-import ResetButton from './components/ResetButton'
+import { PlayButton } from './components/Button'
+import { IncrementButton } from './components/Button'
 import './App.css'
 
 function App() {
@@ -14,14 +15,9 @@ function App() {
 
   return (
     <div className="calculator-wrapper">
-      <h1>Hello, world!</h1>
-      <p>This is the beginning of the tip calculator app.</p>
+      <h1>Tip Calculator app</h1>
+      <p></p>
       <Bill />
-      <SelectTip />
-      <NumberOfPeople />
-      <TipAmount />
-      <Total />
-      <ResetButton />
     </div>
   )
 }
