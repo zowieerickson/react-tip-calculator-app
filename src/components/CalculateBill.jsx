@@ -1,12 +1,11 @@
 import { useState } from "react"
 import Total from "./Total"
-import NumberOfPeople from "./NumberOfPeople"
 
 
 
 export function Bill() {
     const [bill, setBill] = useState(0)
-    const [peopleCount, setPeopleCount] = useState(0)
+    const [peopleCount, setPeopleCount] = useState(1)
 
 
     function handleBillChange(e) {
@@ -18,10 +17,11 @@ export function Bill() {
     }
 
     function calculateTotalPrice() {
-        return (
-            bill > 0 && peopleCount > 0 ? bill / peopleCount : null
-            
-        )
+        console.log(peopleCount)
+        if (bill > 0 && peopleCount > 0) {
+            return bill / peopleCount
+        }
+
     }
 
     return (
