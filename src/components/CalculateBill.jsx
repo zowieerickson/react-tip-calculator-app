@@ -22,7 +22,29 @@ export function Bill() {
         }
     }
 
+    // Adjust tip state
     function handleClickAddTip5() {
+        return setTipPercentage(.05)
+    }
+
+    function handleClickAddTip10() {
+        return setTipPercentage(.10)
+    }
+
+    function handleClickAddTip15() {
+        return setTipPercentage(.15)
+    }
+
+    function handleClickAddTip25() {
+        return setTipPercentage(.25)
+    }
+
+    function handleClickAddTip50() {
+        return setTipPercentage(.50)
+    }
+
+    // Custom tip
+    function handleClickAddTipCustom() {
         return setTipPercentage(.05)
     }
 
@@ -53,11 +75,11 @@ export function Bill() {
             />
             {/* Beginning of Tip Module */}
             <h3>Select Tip %</h3>
-            <button onClick={handleClickAddTip5}>5 %</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
+            <button onClick={handleClickAddTip5}>5%</button>
+            <button onClick={handleClickAddTip10}>10%</button>
+            <button onClick={handleClickAddTip15}>15%</button>
+            <button onClick={handleClickAddTip25}>25%</button>
+            <button onClick={handleClickAddTip50}>50%</button>
             <p>Tip Amount: ${handleClickTipAmount()}</p>
             {/* End of Tip Module */}
             {/* Beginning of People Count Module */}
