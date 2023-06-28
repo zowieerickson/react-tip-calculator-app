@@ -5,6 +5,8 @@ import Total from "./Total"
 export function Bill() {
     const [bill, setBill] = useState('')
     const [peopleCount, setPeopleCount] = useState(1)
+    const [tipPercentage, setTipPercentage] = useState(0)
+    let tipAmount;
 
     const regexNumber = /^[0-9\b]+$/;
 
@@ -20,9 +22,18 @@ export function Bill() {
         }
     }
 
+    function handleClickAddTip5() {
+        return setTipPercentage(.05)
+    }
+
+    function handleClickTipAmount() {
+        tipAmount = (tipPercentage * bill).toFixed(2)
+        return tipAmount
+    }
+
     function calculateTotalPrice() {
         if (bill > 0 && peopleCount > 0) {
-            return (bill / peopleCount).toFixed(2)
+            return (bill / peopleCount + Number(tipAmount)).toFixed(2)
         }
 
         if (bill > 0 && peopleCount == 0) {
@@ -42,11 +53,12 @@ export function Bill() {
             />
             {/* Beginning of Tip Module */}
             <h3>Select Tip %</h3>
-            <button>5%</button>
+            <button onClick={handleClickAddTip5}>5 %</button>
             <button>10%</button>
             <button>15%</button>
             <button>25%</button>
             <button>50%</button>
+            <p>Tip Amount: ${handleClickTipAmount()}</p>
             {/* End of Tip Module */}
             {/* Beginning of People Count Module */}
             
