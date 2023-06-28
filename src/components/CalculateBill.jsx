@@ -6,7 +6,7 @@ export function Bill() {
     const [bill, setBill] = useState('')
     const [peopleCount, setPeopleCount] = useState(1)
     const [tipPercentage, setTipPercentage] = useState(0)
-    let tipAmount;
+    let tipAmount = 0;
 
     const regexNumber = /^[0-9\b]+$/;
 
@@ -55,7 +55,8 @@ export function Bill() {
 
     function calculateTotalPrice() {
         if (bill > 0 && peopleCount > 0) {
-            return (bill / peopleCount + Number(tipAmount)).toFixed(2)
+            const tipPlusBill =  Number(bill) + Number(tipAmount)
+            return (tipPlusBill / peopleCount ).toFixed(2)
         }
 
         if (bill > 0 && peopleCount == 0) {
