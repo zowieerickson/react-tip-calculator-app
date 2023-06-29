@@ -48,13 +48,13 @@ export function Bill() {
     }
 
     function calculateTotalPrice() {
+        const tipPlusBill =  Number(bill) + Number(tipAmount)
         if (bill > 0 && peopleCount > 0) {
-            const tipPlusBill =  Number(bill) + Number(tipAmount)
             return (tipPlusBill / peopleCount ).toFixed(2)
         }
 
         if (bill > 0 && peopleCount == 0) {
-            return bill
+            return (tipPlusBill).toFixed(2)
         }
     }
 
