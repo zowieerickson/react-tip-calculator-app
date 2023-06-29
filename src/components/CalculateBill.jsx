@@ -25,6 +25,7 @@ export function Bill() {
 
     // Adjust tip state
     function handleClickAddTip(e) {
+        setCustomTip('')
         return setTipPercentage(e.target.value / 100)
     }
 
