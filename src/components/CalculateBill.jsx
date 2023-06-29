@@ -22,25 +22,15 @@ export function Bill() {
         }
     }
 
+    function handleTipChange(e) {
+        if (e.target.value === "" || regexNumber.test(e.target.value)) {
+            tipPercentage(e.target.value);
+        }
+    }
+
     // Adjust tip state
-    function handleClickAddTip5() {
-        return setTipPercentage(.05)
-    }
-
-    function handleClickAddTip10() {
-        return setTipPercentage(.10)
-    }
-
-    function handleClickAddTip15() {
-        return setTipPercentage(.15)
-    }
-
-    function handleClickAddTip25() {
-        return setTipPercentage(.25)
-    }
-
-    function handleClickAddTip50() {
-        return setTipPercentage(.50)
+    function handleClickAddTip(e) {
+        return setTipPercentage(e.target.value / 100)
     }
 
     // Custom tip
@@ -76,11 +66,18 @@ export function Bill() {
             />
             {/* Beginning of Tip Module */}
             <h3>Select Tip %</h3>
-            <button onClick={handleClickAddTip5}>5%</button>
-            <button onClick={handleClickAddTip10}>10%</button>
-            <button onClick={handleClickAddTip15}>15%</button>
-            <button onClick={handleClickAddTip25}>25%</button>
-            <button onClick={handleClickAddTip50}>50%</button>
+            <button onClick={handleClickAddTip} value="5">5</button>
+            <button onClick={handleClickAddTip} value="10">10%</button>
+            <button onClick={handleClickAddTip} value="15">15%</button>
+            <button onClick={handleClickAddTip} value="25">25%</button>
+            <button onClick={handleClickAddTip} value="50">50%</button>
+            <input 
+                onChange={handleTipChange}
+                value={tipPercentage}
+                type="text"
+                name=""
+                id="" 
+            />
             <p>Tip Amount: ${handleClickTipAmount()}</p>
             {/* End of Tip Module */}
             {/* Beginning of People Count Module */}
