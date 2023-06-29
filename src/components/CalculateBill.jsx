@@ -6,6 +6,7 @@ export function Bill() {
     const [bill, setBill] = useState('')
     const [peopleCount, setPeopleCount] = useState(1)
     const [tipPercentage, setTipPercentage] = useState(0)
+    const [customTip, setCustomTip] = useState('')
     let tipAmount = 0;
 
     const regexNumber = /^[1-9]\d*$/;
@@ -37,8 +38,7 @@ export function Bill() {
     function handleClickAddTipCustom(e) {
         if (e.target.value === "" || regexNumber.test(e.target.value)) {
             setTipPercentage(e.target.value / 100);
-            
-            return e.target.value 
+            setCustomTip(e.target.value)
         }
     }
 
@@ -56,6 +56,13 @@ export function Bill() {
         if (bill > 0 && peopleCount == 0) {
             return (tipPlusBill).toFixed(2)
         }
+    }
+
+    function handleOnClickReset() {
+        setBill('')
+        setPeopleCount(1)
+        setTipPercentage(0)
+        setCustomTip('')
     }
 
     return (
@@ -79,6 +86,7 @@ export function Bill() {
                 onChange={handleClickAddTipCustom}
                 type="text"
                 placeholder="Custom"
+                value={customTip}
                 name=""
                 id="" 
             />
@@ -99,6 +107,7 @@ export function Bill() {
             <Total 
             totalPrice={calculateTotalPrice()}
             />
+            <button onClick={handleOnClickReset}>Reset</button>
         </div>
     )
 }
