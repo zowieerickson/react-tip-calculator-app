@@ -23,12 +23,6 @@ export function Bill() {
         }
     }
 
-    function handleTipChange(e) {
-        if (e.target.value === "" || regexNumber.test(e.target.value)) {
-            setTipPercentage(e.target.value / 100);
-        }
-    }
-
     // Adjust tip state
     function handleClickAddTip(e) {
         return setTipPercentage(e.target.value / 100)
