@@ -24,7 +24,7 @@ export function Bill() {
 
     function handleTipChange(e) {
         if (e.target.value === "" || regexNumber.test(e.target.value)) {
-            tipPercentage(e.target.value);
+            setTipPercentage(e.target.value / 100);
         }
     }
 
@@ -34,8 +34,12 @@ export function Bill() {
     }
 
     // Custom tip
-    function handleClickAddTipCustom() {
-        return setTipPercentage(.05)
+    function handleClickAddTipCustom(e) {
+        if (e.target.value === "" || regexNumber.test(e.target.value)) {
+            setTipPercentage(e.target.value / 100);
+            
+            return e.target.value 
+        }
     }
 
     function handleClickTipAmount() {
@@ -66,15 +70,15 @@ export function Bill() {
             />
             {/* Beginning of Tip Module */}
             <h3>Select Tip %</h3>
-            <button onClick={handleClickAddTip} value="5">5</button>
+            <button onClick={handleClickAddTip} value="5">5%</button>
             <button onClick={handleClickAddTip} value="10">10%</button>
             <button onClick={handleClickAddTip} value="15">15%</button>
             <button onClick={handleClickAddTip} value="25">25%</button>
             <button onClick={handleClickAddTip} value="50">50%</button>
             <input 
-                onChange={handleTipChange}
-                value={tipPercentage}
+                onChange={handleClickAddTipCustom}
                 type="text"
+                placeholder="Custom"
                 name=""
                 id="" 
             />
