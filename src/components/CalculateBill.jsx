@@ -8,7 +8,7 @@ export function Bill() {
     const [tipPercentage, setTipPercentage] = useState(0)
     let tipAmount = 0;
 
-    const regexNumber = /^[0-9\b]+$/;
+    const regexNumber = /^[1-9]\d*$/;
 
     function handleBillChange(e) {
         if (e.target.value === "" || regexNumber.test(e.target.value)) {
