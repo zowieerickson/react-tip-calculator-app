@@ -1,4 +1,5 @@
 import { useState } from "react"
+import SelectTip from "./SelectTip"
 import Total from "./Total"
 
 
@@ -7,13 +8,32 @@ export function Bill() {
     const [peopleCount, setPeopleCount] = useState(1)
     const [tipPercentage, setTipPercentage] = useState(0)
     const [customTip, setCustomTip] = useState('')
-    let tipAmount = 0;
+    const [tipAmount, setTipAmount] = useState('')
+    // let tipAmount = 0;
 
     const regexNumber = /^[1-9]\d*$/;
 
+    // Handle state change, passing to child component. Let's lift this state up
+    const handleStateChangeCustomTip = (newValue) => {
+        setCustomTip(newValue)
+    }
+
+    const handleStateChangeTipPercentage = (newValue) => {
+        setTipPercentage(newValue)
+    }
+
+    const handleStateChangeBill = (newValue) => {
+        setBill(newValue)
+    }
+
+    const handleTipAmount = (newValue) => {
+        setTipAmount(newValue)
+    }
+    // 
+
     function handleBillChange(e) {
         if (e.target.value === "" || regexNumber.test(e.target.value)) {
-            setBill(e.target.value);
+            handleStateChangeBill(e.target.value);
         }
     }
 
@@ -23,27 +43,9 @@ export function Bill() {
         }
     }
 
-    // Adjust tip state
-    function handleClickAddTip(e) {
-        setCustomTip('')
-        return setTipPercentage(e.target.value / 100)
-    }
-
-    // Custom tip
-    function handleClickAddTipCustom(e) {
-        if (e.target.value === "" || regexNumber.test(e.target.value)) {
-            setTipPercentage(e.target.value / 100);
-            setCustomTip(e.target.value)
-        }
-    }
-
-    function handleClickTipAmount() {
-        tipAmount = (tipPercentage * bill).toFixed(2)
-        return tipAmount
-    }
-
     function calculateTotalPrice() {
-        const tipPlusBill =  Number(bill) + Number(tipAmount)
+        const tipPlusBill =  Number(bill) + Number((tipPercentage * bill).toFixed(2))
+        // console.log(`This is in Bill Component. tipAmount is ${tipAmount}`)
         if (bill > 0 && peopleCount > 0) {
             return (tipPlusBill / peopleCount ).toFixed(2)
         }
@@ -71,21 +73,16 @@ export function Bill() {
                 id="" 
             />
             {/* Beginning of Tip Module */}
-            <h3>Select Tip %</h3>
-            <button onClick={handleClickAddTip} value="5">5%</button>
-            <button onClick={handleClickAddTip} value="10">10%</button>
-            <button onClick={handleClickAddTip} value="15">15%</button>
-            <button onClick={handleClickAddTip} value="25">25%</button>
-            <button onClick={handleClickAddTip} value="50">50%</button>
-            <input 
-                onChange={handleClickAddTipCustom}
-                type="text"
-                placeholder="Custom"
-                value={customTip}
-                name=""
-                id="" 
+            <SelectTip 
+                tipPercentage={tipPercentage} 
+                customTip={customTip} 
+                bill={bill}
+                tipAmount={tipAmount}
+                onStateChangeTipPercentage={handleStateChangeTipPercentage}
+                onStateChangeCustomTip={handleStateChangeCustomTip}
+                onStateChangeBill={handleStateChangeBill}
+                onStateChangeTipAmount={handleTipAmount}
             />
-            <p>Tip Amount: ${handleClickTipAmount()}</p>
             {/* End of Tip Module */}
             {/* Beginning of People Count Module */}
             
