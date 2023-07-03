@@ -1,11 +1,11 @@
 export default function SelectTip({
+    regexNumber,
     customTip,
     tipPercentage,
     bill,
     onStateChangeCustomTip,
     onStateChangeTipPercentage,
   }) {
-    const regexNumber = /^[1-9]\d*$/;
   
     function handleClickAddTip(e) {
       onStateChangeCustomTip('');

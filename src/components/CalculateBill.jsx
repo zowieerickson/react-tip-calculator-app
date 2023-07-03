@@ -19,15 +19,11 @@ export function Bill() {
     const handleStateChangeTipPercentage = (newValue) => {
         setTipPercentage(newValue)
     }
-
-    const handleStateChangeBill = (newValue) => {
-        setBill(newValue)
-    }
     // 
 
     function handleBillChange(e) {
         if (e.target.value === "" || regexNumber.test(e.target.value)) {
-            handleStateChangeBill(e.target.value);
+            setBill(e.target.value);
         }
     }
 
@@ -72,6 +68,7 @@ export function Bill() {
                 customTip={customTip} 
                 onStateChangeCustomTip={handleStateChangeCustomTip}
                 bill={bill}
+                regexNumber={regexNumber}
             />
             {/* End of Tip Module */}
 
