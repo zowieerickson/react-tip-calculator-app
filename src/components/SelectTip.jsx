@@ -24,10 +24,6 @@ export default function SelectTip({
       }
     }
   
-    function calculateTipAmount() {
-      return (tipPercentage * bill).toFixed(2);
-    }
-  
     return (
       <div>
         <h3>Select Tip %</h3>
@@ -54,7 +50,6 @@ export default function SelectTip({
           name=""
           id=""
         />
-        <p>Tip Amount: ${calculateTipAmount()}</p>
       </div>
     );
   }

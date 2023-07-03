@@ -1,6 +1,8 @@
-function Button({ onClick, children }) {
+import '../styles/button.css'
+
+function Button({buttonClass, onClick, children }) {
     return (
-        <button onClick={onClick}>
+        <button className={buttonClass} onClick={onClick}>
             {children}
         </button>
     )
@@ -15,7 +17,7 @@ export default function ResetButton({ onStateChangeBill, onStateChangePeopleCoun
     }
 
     return (
-        <Button onClick={handleOnClickReset}>
+        <Button buttonClass="reset" onClick={handleOnClickReset}>
             Reset
         </Button>
     )

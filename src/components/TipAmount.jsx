@@ -1,9 +1,9 @@
-export default function TipAmount() {
-    return (
-        <div>
-            <h3>Tip Amount</h3>
-            <p>/ person</p>
-            <p>$4.27</p>
-        </div>
-    )
+export default function TipAmount({ tipPercentage, bill }) {
+
+    function calculateTipAmount() {
+        return (tipPercentage * bill).toFixed(2);
+      }
+
+    return <p>Tip Amount: ${calculateTipAmount()}</p>
 }
+

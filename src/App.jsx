@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="calculator-wrapper">
       <h1>Tip Calculator app</h1>
-      <p></p>
       <DataWrapper />
     </div>
   )

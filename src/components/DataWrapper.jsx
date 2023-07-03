@@ -1,7 +1,9 @@
 import { useState } from "react"
+import '../styles/datawrapper.css'
 import Bill from "./Bill"
 import SelectTip from "./SelectTip"
 import NumberOfPeople from "./NumberOfPeople"
+import TipAmount from "./TipAmount"
 import Total from "./Total"
 import ResetButton from "./Button"
 
@@ -33,35 +35,47 @@ export default function DataWrapper() {
     // End of lifting State
 
     return (
-        <div>
-            <Bill 
-                bill={bill}
-                onStateChangeBill={handleStateChangeBill}
-                regexNumbersOnly={regexNumbersOnly}
-            />
-            <SelectTip 
-                tipPercentage={tipPercentage} 
-                onStateChangeTipPercentage={handleStateChangeTipPercentage}
-                customTip={customTip} 
-                onStateChangeCustomTip={handleStateChangeCustomTip}
-                bill={bill}
-            />
-            <NumberOfPeople
-                peopleCount={peopleCount}
-                onStateChangePeopleCount={handleStateChangePeopleCount}
-                regexNumbersOnly={regexNumbersOnly}
-            />
-            <Total 
-                bill={bill}
-                tipPercentage={tipPercentage}
-                peopleCount={peopleCount}
-            />
-            <ResetButton
-                onStateChangeBill={handleStateChangeBill}
-                onStateChangePeopleCount={handleStateChangePeopleCount}
-                onStateChangeTipPercentage={handleStateChangeTipPercentage}
-                onStateChangeCustomTip={handleStateChangeCustomTip}
-            />
-        </div>
+        <section className="tip-calculator">
+            <div className="calculation-container">
+                <Bill 
+                    bill={bill}
+                    onStateChangeBill={handleStateChangeBill}
+                    regexNumbersOnly={regexNumbersOnly}
+                />
+                <SelectTip 
+                    tipPercentage={tipPercentage} 
+                    onStateChangeTipPercentage={handleStateChangeTipPercentage}
+                    customTip={customTip} 
+                    onStateChangeCustomTip={handleStateChangeCustomTip}
+                    bill={bill}
+                />
+                <NumberOfPeople
+                    peopleCount={peopleCount}
+                    onStateChangePeopleCount={handleStateChangePeopleCount}
+                    regexNumbersOnly={regexNumbersOnly}
+                />
+            </div>
+            <div className="summary-container">
+                <TipAmount
+                    bill={bill}
+                    tipPercentage={tipPercentage}
+                />
+                <Total 
+                    bill={bill}
+                    tipPercentage={tipPercentage}
+                    peopleCount={peopleCount}
+                />
+                <ResetButton
+                    bill={bill}
+                    peopleCount={peopleCount}
+                    tipPercentage={tipPercentage} 
+                    customTip={customTip}
+                    onStateChangeBill={handleStateChangeBill}
+                    onStateChangePeopleCount={handleStateChangePeopleCount}
+                    onStateChangeTipPercentage={handleStateChangeTipPercentage}
+                    onStateChangeCustomTip={handleStateChangeCustomTip}
+                />
+            </div>
+        </section>
     )
 }
