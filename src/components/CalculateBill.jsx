@@ -32,19 +32,6 @@ export function Bill() {
         }
     }
 
-
-
-    function calculateTotalPrice() {
-        const tipPlusBill =  Number(bill) + Number((tipPercentage * bill).toFixed(2))
-        if (bill > 0 && peopleCount > 0) {
-            return (tipPlusBill / peopleCount ).toFixed(2)
-        }
-
-        if (bill > 0 && peopleCount == 0) {
-            return (tipPlusBill).toFixed(2)
-        }
-    }
-
     // Reset button
     function handleOnClickReset() {
         setBill('')
@@ -63,7 +50,6 @@ export function Bill() {
                 name=""
                 id="" 
             />
-            {/* Beginning of Tip Module */}
             <SelectTip 
                 tipPercentage={tipPercentage} 
                 onStateChangeTipPercentage={handleStateChangeTipPercentage}
@@ -71,17 +57,15 @@ export function Bill() {
                 onStateChangeCustomTip={handleStateChangeCustomTip}
                 bill={bill}
             />
-            {/* End of Tip Module */}
-
-            {/* Beginning of People Count Module */}
             <NumberOfPeople
                 peopleCount={peopleCount}
                 onStateChangePeopleCount={handleStateChangePeopleCount}
                 regexNumbersOnly={regexNumbersOnly}
             />
-            {/* End of People Count Module */}
             <Total 
-            totalPrice={calculateTotalPrice()}
+                bill={bill}
+                tipPercentage={tipPercentage}
+                peopleCount={peopleCount}
             />
             <button onClick={handleOnClickReset}>Reset</button>
         </div>
