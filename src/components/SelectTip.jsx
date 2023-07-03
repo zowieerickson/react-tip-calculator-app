@@ -6,15 +6,21 @@ export default function SelectTip({
     onStateChangeCustomTip,
     onStateChangeTipPercentage,
   }) {
-  
+
+    const regexCustomTip = /^(0|[1-9]\d*)$/
+
     function handleClickAddTip(e) {
       onStateChangeCustomTip('');
       onStateChangeTipPercentage(e.target.value / 100);
     }
   
     function handleClickAddTipCustom(e) {
-      if (e.target.value === '' || regexNumber.test(e.target.value)) {
+      if (e.target.value === '' || regexCustomTip.test(e.target.value)) {
         onStateChangeTipPercentage(e.target.value / 100);
+            if(e.target.value > 100) {
+                e.target.value = 100;
+                onStateChangeTipPercentage(100 / 100)
+            }
         onStateChangeCustomTip(e.target.value);
       }
     }
