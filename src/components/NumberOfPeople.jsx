@@ -1,17 +1,22 @@
-import { useState } from "react"
-
-export default function NumberOfPeople( {howManyPeople} ) {
-    const [peopleCount, setPeopleCount] = useState(0)
+export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, regexNumbersOnly }) {
 
     function handlePeopleCountChange(e) {
-        setPeopleCount(e.target.value)
+        if (e.target.value === "" || regexNumbersOnly.test(e.target.value)) {
+            onStateChangePeopleCount(e.target.value)
+        }
     }
 
     return (
         <div>
             <h3>Number of People</h3>
-            <input onChange={handlePeopleCountChange} type="text" name="" id="" />
-            <p>{howManyPeople} people</p>
+            <input 
+                onChange={handlePeopleCountChange} 
+                type="text"
+                value={peopleCount}
+                name="" 
+                id="" 
+            />
+            <p>{peopleCount} people</p>
         </div>
     )
 }

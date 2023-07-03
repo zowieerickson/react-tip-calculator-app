@@ -1,6 +1,7 @@
 import { useState } from "react"
 import SelectTip from "./SelectTip"
 import Total from "./Total"
+import NumberOfPeople from "./NumberOfPeople"
 
 
 export function Bill() {
@@ -19,6 +20,10 @@ export function Bill() {
     const handleStateChangeTipPercentage = (newValue) => {
         setTipPercentage(newValue)
     }
+
+    const handleStateChangePeopleCount = (newValue) => {
+        setPeopleCount(newValue)
+    }
     // 
 
     function handleBillChange(e) {
@@ -27,11 +32,7 @@ export function Bill() {
         }
     }
 
-    function handlePeopleCountChange(e) {
-        if (e.target.value === "" || regexNumbersOnly.test(e.target.value)) {
-            setPeopleCount(e.target.value)
-        }
-    }
+
 
     function calculateTotalPrice() {
         const tipPlusBill =  Number(bill) + Number((tipPercentage * bill).toFixed(2))
@@ -44,6 +45,7 @@ export function Bill() {
         }
     }
 
+    // Reset button
     function handleOnClickReset() {
         setBill('')
         setPeopleCount(1)
@@ -72,15 +74,11 @@ export function Bill() {
             {/* End of Tip Module */}
 
             {/* Beginning of People Count Module */}
-            <h3>Number of People</h3>
-            <input 
-                onChange={handlePeopleCountChange} 
-                type="text"
-                value={peopleCount}
-                name="" 
-                id="" 
+            <NumberOfPeople
+                peopleCount={peopleCount}
+                onStateChangePeopleCount={handleStateChangePeopleCount}
+                regexNumbersOnly={regexNumbersOnly}
             />
-            <p>{peopleCount} people</p>
             {/* End of People Count Module */}
             <Total 
             totalPrice={calculateTotalPrice()}
