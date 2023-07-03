@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 function Button({ onClick, children }) {
     return (
         <button onClick={onClick}>
@@ -8,32 +6,17 @@ function Button({ onClick, children }) {
     )
 }
 
-export function PlayButton({ movieName }) {
-    function handlePlayClick() {
-        alert(`Playing ${movieName}`)
+export default function ResetButton({ onStateChangeBill, onStateChangePeopleCount, onStateChangeTipPercentage, onStateChangeCustomTip }) {
+    function handleOnClickReset() {
+        onStateChangeBill('')
+        onStateChangePeopleCount(1)
+        onStateChangeTipPercentage(0)
+        onStateChangeCustomTip('')
     }
 
     return (
-        <Button onClick={handlePlayClick}>
-            Hello
+        <Button onClick={handleOnClickReset}>
+            Reset
         </Button>
-    )
-}
-
-export function IncrementButton() {
-    let [indexNum, setIndexNum] = useState(0)
-    function handleIncrementClick() {
-        indexNum++
-        console.log(indexNum, setIndexNum)
-        setIndexNum(indexNum++)
-    }
-
-    return (
-        <>
-            {indexNum}
-            <Button onClick={handleIncrementClick}>
-                Increment button
-            </Button>
-        </>
     )
 }

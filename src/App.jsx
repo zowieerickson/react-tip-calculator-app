@@ -6,8 +6,6 @@ import SelectTip from './components/SelectTip'
 import NumberOfPeople from './components/NumberOfPeople'
 import TipAmount from './components/TipAmount'
 import Total from './components/Total'
-import { PlayButton } from './components/Button'
-import { IncrementButton } from './components/Button'
 import './App.css'
 
 function App() {

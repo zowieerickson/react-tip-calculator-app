@@ -2,6 +2,7 @@ import { useState } from "react"
 import SelectTip from "./SelectTip"
 import Total from "./Total"
 import NumberOfPeople from "./NumberOfPeople"
+import ResetButton from "./Button"
 
 
 export function Bill() {
@@ -13,6 +14,10 @@ export function Bill() {
     const regexNumbersOnly = /^[1-9]\d*$/;
 
     // Handle state change, passing to child component. Let's lift this state up
+    const handleStateChangeBill = (newValue) => {
+        setBill(newValue)
+    }
+
     const handleStateChangeCustomTip = (newValue) => {
         setCustomTip(newValue)
     }
@@ -33,12 +38,7 @@ export function Bill() {
     }
 
     // Reset button
-    function handleOnClickReset() {
-        setBill('')
-        setPeopleCount(1)
-        setTipPercentage(0)
-        setCustomTip('')
-    }
+
 
     return (
         <div>
@@ -67,7 +67,12 @@ export function Bill() {
                 tipPercentage={tipPercentage}
                 peopleCount={peopleCount}
             />
-            <button onClick={handleOnClickReset}>Reset</button>
+            <ResetButton
+                onStateChangeBill={handleStateChangeBill}
+                onStateChangePeopleCount={handleStateChangePeopleCount}
+                onStateChangeTipPercentage={handleStateChangeTipPercentage}
+                onStateChangeCustomTip={handleStateChangeCustomTip}
+            />
         </div>
     )
 }
