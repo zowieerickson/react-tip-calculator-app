@@ -8,8 +8,6 @@ export function Bill() {
     const [peopleCount, setPeopleCount] = useState(1)
     const [tipPercentage, setTipPercentage] = useState(0)
     const [customTip, setCustomTip] = useState('')
-    const [tipAmount, setTipAmount] = useState('')
-    // let tipAmount = 0;
 
     const regexNumber = /^[1-9]\d*$/;
 
@@ -24,10 +22,6 @@ export function Bill() {
 
     const handleStateChangeBill = (newValue) => {
         setBill(newValue)
-    }
-
-    const handleTipAmount = (newValue) => {
-        setTipAmount(newValue)
     }
     // 
 
@@ -45,7 +39,6 @@ export function Bill() {
 
     function calculateTotalPrice() {
         const tipPlusBill =  Number(bill) + Number((tipPercentage * bill).toFixed(2))
-        // console.log(`This is in Bill Component. tipAmount is ${tipAmount}`)
         if (bill > 0 && peopleCount > 0) {
             return (tipPlusBill / peopleCount ).toFixed(2)
         }
@@ -75,17 +68,14 @@ export function Bill() {
             {/* Beginning of Tip Module */}
             <SelectTip 
                 tipPercentage={tipPercentage} 
-                customTip={customTip} 
-                bill={bill}
-                tipAmount={tipAmount}
                 onStateChangeTipPercentage={handleStateChangeTipPercentage}
+                customTip={customTip} 
                 onStateChangeCustomTip={handleStateChangeCustomTip}
-                onStateChangeBill={handleStateChangeBill}
-                onStateChangeTipAmount={handleTipAmount}
+                bill={bill}
             />
             {/* End of Tip Module */}
+
             {/* Beginning of People Count Module */}
-            
             <h3>Number of People</h3>
             <input 
                 onChange={handlePeopleCountChange} 

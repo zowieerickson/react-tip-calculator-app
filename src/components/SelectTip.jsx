@@ -2,10 +2,8 @@ export default function SelectTip({
     customTip,
     tipPercentage,
     bill,
-    tipAmount,
     onStateChangeCustomTip,
     onStateChangeTipPercentage,
-    onStateChangeTipAmount,
   }) {
     const regexNumber = /^[1-9]\d*$/;
   
@@ -22,7 +20,6 @@ export default function SelectTip({
     }
   
     function calculateTipAmount() {
-        console.log((tipPercentage * bill).toFixed(2))
       return (tipPercentage * bill).toFixed(2);
     }
   
