@@ -9,7 +9,7 @@ export function Bill() {
     const [tipPercentage, setTipPercentage] = useState(0)
     const [customTip, setCustomTip] = useState('')
 
-    const regexNumber = /^[1-9]\d*$/;
+    const regexNumbersOnly = /^[1-9]\d*$/;
 
     // Handle state change, passing to child component. Let's lift this state up
     const handleStateChangeCustomTip = (newValue) => {
@@ -22,13 +22,13 @@ export function Bill() {
     // 
 
     function handleBillChange(e) {
-        if (e.target.value === "" || regexNumber.test(e.target.value)) {
+        if (e.target.value === "" || regexNumbersOnly.test(e.target.value)) {
             setBill(e.target.value);
         }
     }
 
     function handlePeopleCountChange(e) {
-        if (e.target.value === "" || regexNumber.test(e.target.value)) {
+        if (e.target.value === "" || regexNumbersOnly.test(e.target.value)) {
             setPeopleCount(e.target.value)
         }
     }
@@ -68,7 +68,6 @@ export function Bill() {
                 customTip={customTip} 
                 onStateChangeCustomTip={handleStateChangeCustomTip}
                 bill={bill}
-                regexNumber={regexNumber}
             />
             {/* End of Tip Module */}
 
