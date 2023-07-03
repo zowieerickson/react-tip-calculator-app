@@ -1,11 +1,12 @@
 import { useState } from "react"
+import Bill from "./Bill"
 import SelectTip from "./SelectTip"
-import Total from "./Total"
 import NumberOfPeople from "./NumberOfPeople"
+import Total from "./Total"
 import ResetButton from "./Button"
 
 
-export function Bill() {
+export default function DataWrapper() {
     const [bill, setBill] = useState('')
     const [peopleCount, setPeopleCount] = useState(1)
     const [tipPercentage, setTipPercentage] = useState(0)
@@ -29,26 +30,14 @@ export function Bill() {
     const handleStateChangePeopleCount = (newValue) => {
         setPeopleCount(newValue)
     }
-    // 
-
-    function handleBillChange(e) {
-        if (e.target.value === "" || regexNumbersOnly.test(e.target.value)) {
-            setBill(e.target.value);
-        }
-    }
-
-    // Reset button
-
+    // End of lifting State
 
     return (
         <div>
-            <h3>Bill</h3>
-            <input 
-                onChange={handleBillChange}
-                value={bill}
-                type="text"
-                name=""
-                id="" 
+            <Bill 
+                bill={bill}
+                onStateChangeBill={handleStateChangeBill}
+                regexNumbersOnly={regexNumbersOnly}
             />
             <SelectTip 
                 tipPercentage={tipPercentage} 
