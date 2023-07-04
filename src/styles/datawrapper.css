@@ -12,8 +12,16 @@
     max-width: 380px;
 }
 
+.calculation-container h3 {
+    color: #5E7A7D;
+    font-size: 16px;
+    font-family: Space Mono;
+    font-weight: 700;
+}
+
 .summary-container {
     width: 100%;
+    padding: 40px;
     border-radius: 15px;
     background: #00474B;
 }
