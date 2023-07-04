@@ -1,16 +1,18 @@
 .tip-calculator {
     display: flex;
-    padding: 48px;
+    padding: 2em;
     border-radius: 25px;
     background: #FFF;
     box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.20);
 }
 
 .calculation-container {
+    padding: 0 3em 0 1em;
     max-width: 380px;
 }
 
 .summary-container {
+    width: 100%;
     border-radius: 15px;
     background: #00474B;
 }
