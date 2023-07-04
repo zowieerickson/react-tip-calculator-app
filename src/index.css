@@ -1,7 +1,7 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Space Mono', monospace;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 700;
 
   background: #C5E4E7;
 
@@ -37,6 +37,5 @@ input {
   color: #00474B;
   text-align: right;
   font-size: 24px;
-  font-family: Space Mono;
   font-weight: 700;
 }
