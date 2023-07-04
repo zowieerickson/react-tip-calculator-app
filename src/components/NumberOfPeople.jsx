@@ -16,7 +16,6 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
                 name="" 
                 id="" 
             />
-            <p>{peopleCount} people</p>
         </div>
     )
 }

@@ -7,7 +7,8 @@
 }
 
 .calculation-container {
-    padding: 0 3em 0 1em;
+    padding-right: 3em;
+    padding-left: 1em;
     max-width: 380px;
 }
 
