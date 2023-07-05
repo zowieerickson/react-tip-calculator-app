@@ -27,23 +27,24 @@ export default function SelectTip({
       <div>
         <h3>Select Tip %</h3>
         <div className="tip-buttons-wrapper">
-          <button className="tip-percentage" onClick={handleClickAddTip} value="5">
+          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="5">
             5%
           </button>
-          <button className="tip-percentage" onClick={handleClickAddTip} value="10">
+          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="10">
             10%
           </button>
-          <button className="tip-percentage" onClick={handleClickAddTip} value="15">
+          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="15">
             15%
           </button>
-          <button className="tip-percentage" onClick={handleClickAddTip} value="25">
+          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="25">
             25%
           </button>
-          <button className="tip-percentage" onClick={handleClickAddTip} value="50">
+          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="50">
             50%
           </button>
           <input
             onChange={handleClickAddTipCustom}
+            className="tip-percentage tip-custom"
             type="text"
             placeholder="Custom"
             value={customTip}

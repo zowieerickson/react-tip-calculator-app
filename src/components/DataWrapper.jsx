@@ -1,5 +1,5 @@
 import { useState } from "react"
-import '../styles/datawrapper.css'
+import '../styles/data-wrapper.css'
 import Bill from "./Bill"
 import SelectTip from "./SelectTip"
 import NumberOfPeople from "./NumberOfPeople"

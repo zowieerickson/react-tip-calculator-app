@@ -1,5 +1,6 @@
 .tip-calculator {
     display: flex;
+    gap: 3em;
     padding: 2em;
     border-radius: 25px;
     background: #FFF;
@@ -9,10 +10,9 @@
 .calculation-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 40px;
-    padding-right: 3em;
-    padding-left: 1em;
-    max-width: 380px;
+    max-width: 379px;
 }
 
 .calculation-container h3 {
