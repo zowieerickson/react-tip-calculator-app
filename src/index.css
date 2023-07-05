@@ -45,6 +45,11 @@ input {
   padding-right: 17px;
 }
 
+input::placeholder {
+  opacity: 0.35;
+  color: #9EBBBD;
+}
+
 input:focus {
   outline: 2px solid #26C2AE;
 }
