@@ -13,6 +13,7 @@ export default function Bill({ bill, onStateChangeBill, regexNumbersOnly }) {
                 onChange={handleBillChange}
                 value={bill}
                 type="text"
+                placeholder="0"
                 name=""
                 id="" 
             />

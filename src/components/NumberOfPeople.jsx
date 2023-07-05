@@ -13,6 +13,7 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
                 onChange={handlePeopleCountChange} 
                 type="text"
                 value={peopleCount}
+                placeholder="0"
                 name="" 
                 id="" 
             />
