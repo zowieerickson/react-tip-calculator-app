@@ -1,12 +1,9 @@
 export default function SelectTip({
     customTip,
-    tipPercentage,
-    bill,
     onStateChangeCustomTip,
     onStateChangeTipPercentage,
+    regexNumbersOnly
   }) {
-
-    const regexCustomTip = /^(0|[1-9]\d*)$/
 
     function handleClickAddTip(e) {
       onStateChangeCustomTip('');
@@ -14,7 +11,7 @@ export default function SelectTip({
     }
   
     function handleClickAddTipCustom(e) {
-      if (e.target.value === '' || regexCustomTip.test(e.target.value)) {
+      if (e.target.value === '' || regexNumbersOnly.test(e.target.value)) {
         onStateChangeTipPercentage(e.target.value / 100);
             if(e.target.value > 100) {
                 e.target.value = 100;

@@ -14,7 +14,7 @@ export default function DataWrapper() {
     const [tipPercentage, setTipPercentage] = useState(0)
     const [customTip, setCustomTip] = useState('')
 
-    const regexNumbersOnly = /^[1-9]\d*$/;
+    const regexNumbersOnly = /^(0|[1-9]\d*)$/;
 
     // Handle state change, passing to child component. Let's lift this state up
     const handleStateChangeBill = (newValue) => {
@@ -43,11 +43,10 @@ export default function DataWrapper() {
                     regexNumbersOnly={regexNumbersOnly}
                 />
                 <SelectTip 
-                    tipPercentage={tipPercentage} 
                     onStateChangeTipPercentage={handleStateChangeTipPercentage}
                     customTip={customTip} 
                     onStateChangeCustomTip={handleStateChangeCustomTip}
-                    bill={bill}
+                    regexNumbersOnly={regexNumbersOnly}
                 />
                 <NumberOfPeople
                     peopleCount={peopleCount}
