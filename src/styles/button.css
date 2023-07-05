@@ -3,10 +3,14 @@ button {
     border-radius: 5px;
     background: #26C2AE;
     color: #00474B;
-    text-align: center;
     font-size: 20px;
+    text-align: center;
     font-weight: 700;
     outline: none;
+}
+
+.reset-btn {
+
 }
 
 button:active {
