@@ -1,4 +1,4 @@
-import '../styles/numberofpeople.css'
+import '../styles/number-of-people.css'
 
 export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, regexNumbersOnly }) {
 
