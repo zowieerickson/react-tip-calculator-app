@@ -1,0 +1,11 @@
+.bill-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon-dollar-sign {
+    width: 10px;
+    height: 15.5px;
+    background-image: url("../assets/images/icon-dollar.svg");
+}

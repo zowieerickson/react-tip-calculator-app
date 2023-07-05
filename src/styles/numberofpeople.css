@@ -1,0 +1,11 @@
+.people-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon-person {
+    background-image: url("../assets/images/icon-person.svg");
+    width: 13px;
+    height: 16px;
+}

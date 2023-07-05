@@ -53,3 +53,10 @@ input::placeholder {
 input:focus {
   outline: 2px solid #26C2AE;
 }
+
+.icon-input {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 20px;
+}

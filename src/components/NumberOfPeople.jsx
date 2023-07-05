@@ -1,3 +1,5 @@
+import '../styles/numberofpeople.css'
+
 export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, regexNumbersOnly }) {
 
     function handlePeopleCountChange(e) {
@@ -9,14 +11,17 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
     return (
         <div>
             <h3>Number of People</h3>
-            <input 
-                onChange={handlePeopleCountChange} 
-                type="text"
-                value={peopleCount}
-                placeholder="0"
-                name="" 
-                id="" 
-            />
+            <div className="people-input">
+                <svg className="icon-input icon-person" />
+                <input 
+                    onChange={handlePeopleCountChange} 
+                    type="text"
+                    value={peopleCount}
+                    placeholder="0"
+                    name="" 
+                    id="" 
+                />
+            </div>
         </div>
     )
 }

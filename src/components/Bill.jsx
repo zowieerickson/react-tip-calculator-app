@@ -1,3 +1,5 @@
+import '../styles/bill.css'
+
 export default function Bill({ bill, onStateChangeBill, regexNumbersOnly }) {
 
     function handleBillChange(e) {
@@ -9,14 +11,17 @@ export default function Bill({ bill, onStateChangeBill, regexNumbersOnly }) {
     return (
         <div>
             <h3>Bill</h3>
-            <input 
-                onChange={handleBillChange}
-                value={bill}
-                type="text"
-                placeholder="0"
-                name=""
-                id="" 
-            />
+            <div className="bill-input">
+                <svg className="icon-input icon-dollar-sign" />
+                <input 
+                    onChange={handleBillChange}
+                    value={bill}
+                    type="text"
+                    placeholder="0"
+                    name=""
+                    id="" 
+                />
+            </div>
         </div>
     )
 }
