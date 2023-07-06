@@ -4,7 +4,7 @@ export default function SelectTip({
     customTip,
     onStateChangeCustomTip,
     onStateChangeTipPercentage,
-    regexNumbersOnly
+    regexMoney
   }) {
 
     function handleClickAddTip(e) {
@@ -13,7 +13,7 @@ export default function SelectTip({
     }
   
     function handleClickAddTipCustom(e) {
-      if (e.target.value === '' || regexNumbersOnly.test(e.target.value)) {
+      if (e.target.value === '' || regexMoney.test(e.target.value)) {
         onStateChangeTipPercentage(e.target.value / 100);
             if(e.target.value > 100) {
                 e.target.value = 100;

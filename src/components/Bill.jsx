@@ -1,9 +1,9 @@
 import '../styles/bill.css'
 
-export default function Bill({ bill, onStateChangeBill, regexNumbersOnly }) {
+export default function Bill({ bill, onStateChangeBill, regexMoney }) {
 
     function handleBillChange(e) {
-        if (e.target.value === "" || regexNumbersOnly.test(e.target.value)) {
+        if (e.target.value === "" || regexMoney.test(e.target.value)) {
             onStateChangeBill(e.target.value);
         }
     }
