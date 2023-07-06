@@ -4,6 +4,11 @@ export default function TipAmount({ tipPercentage, bill }) {
         return (tipPercentage * bill).toFixed(2);
       }
 
-    return <p>Tip Amount: ${calculateTipAmount()}</p>
+    return (
+      <div className="summary-row">
+        <p className="summary-row-title">Tip Amount <span className="summary-row-subhead">/ person</span></p>
+        <p className="summary-amount">${calculateTipAmount()}</p>
+      </div>
+    )
 }
 
