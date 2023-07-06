@@ -16,10 +16,22 @@
 }
 
 .calculation-container h3 {
+    position: relative;
     color: #5E7A7D;
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 6px;
+}
+
+.error-text {
+    position: absolute;
+    right: 0;
+    color: #E17457;
+}
+
+.error-input:focus {
+    outline: 2px solid #E17052;
+    caret-color: #E17052;
 }
 
 .summary-container {
