@@ -11,7 +11,7 @@ function Button({buttonClass, onClick, children }) {
 export default function ResetButton({ onStateChangeBill, onStateChangePeopleCount, onStateChangeTipPercentage, onStateChangeCustomTip }) {
     function handleOnClickReset() {
         onStateChangeBill('')
-        onStateChangePeopleCount('')
+        onStateChangePeopleCount(1)
         onStateChangeTipPercentage(0)
         onStateChangeCustomTip('')
     }
