@@ -15,7 +15,7 @@ export default function Total({ bill, tipPercentage, peopleCount }) {
     return (
         <div className="summary-row">
             <p className="summary-row-title">Total <span className="summary-row-subhead">/ person</span></p>
-            <p className="summary-amount">${calculateTotalPrice()}</p>
+            <p className="summary-amount">${calculateTotalPrice() == undefined ? '0.00' : calculateTotalPrice()}</p>
         </div>
     )
 }
