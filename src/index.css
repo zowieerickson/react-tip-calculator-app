@@ -30,10 +30,6 @@ button, input {
   font-family: 'Space Mono', monospace;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
 h1, h2, h3 {
   text-align: left;
 }

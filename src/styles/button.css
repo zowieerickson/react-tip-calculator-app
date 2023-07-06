@@ -9,6 +9,10 @@ button {
     outline: none;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 button:active {
     background: #9FE8DF;
 }

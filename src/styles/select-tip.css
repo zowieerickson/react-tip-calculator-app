@@ -10,6 +10,10 @@
     font-size: 23px;
 }
 
+.tip-buttons:active {
+    color: #00474B;
+}
+
 .tip-percentage {
     width: 117px;
     height: 48px;
