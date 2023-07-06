@@ -1,3 +1,5 @@
+import '../styles/summary.css'
+
 export default function Total({ bill, tipPercentage, peopleCount }) {
 
     function calculateTotalPrice() {
@@ -13,7 +15,7 @@ export default function Total({ bill, tipPercentage, peopleCount }) {
     }
 
     return (
-        <div className="summary-row">
+        <div className="summary-row total">
             <p className="summary-row-title">Total <span className="summary-row-subhead">/ person</span></p>
             <p className="summary-amount">${calculateTotalPrice() == undefined ? '0.00' : calculateTotalPrice()}</p>
         </div>

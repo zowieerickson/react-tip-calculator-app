@@ -1,3 +1,5 @@
+import '../styles/summary.css'
+
 export default function TipAmount({ tipPercentage, bill, peopleCount }) {
 
     function calculateTipAmount() {
@@ -8,7 +10,7 @@ export default function TipAmount({ tipPercentage, bill, peopleCount }) {
       }
 
     return (
-      <div className="summary-row">
+      <div className="summary-row tip">
         <p className="summary-row-title">Tip Amount <span className="summary-row-subhead">/ person</span></p>
         <p className="summary-amount">${calculateTipAmount()}</p>
       </div>
