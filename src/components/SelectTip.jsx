@@ -44,7 +44,7 @@ export default function SelectTip({
           </button>
           <input
             onChange={handleClickAddTipCustom}
-            className="tip-percentage tip-custom"
+            className="tip-custom tip-percentage"
             type="text"
             placeholder="Custom"
             value={customTip}
