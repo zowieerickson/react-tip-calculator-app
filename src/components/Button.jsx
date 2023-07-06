@@ -11,12 +11,12 @@ function Button({buttonClass, onClick, children, disabled=true }) {
 export default function ResetButton({ bill, peopleCount, tipPercentage, onStateChangeBill, onStateChangePeopleCount, onStateChangeTipPercentage, onStateChangeCustomTip, disabled }) {
     function handleOnClickReset() {
         onStateChangeBill('')
-        onStateChangePeopleCount(1)
+        onStateChangePeopleCount('')
         onStateChangeTipPercentage(0)
         onStateChangeCustomTip('')
     }
 
-    if (bill !== '' || tipPercentage !== 0  || peopleCount != 1) {
+    if (bill !== '' || tipPercentage !== 0  || peopleCount != '') {
         disabled = false
     }
 
