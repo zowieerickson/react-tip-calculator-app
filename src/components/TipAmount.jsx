@@ -1,7 +1,10 @@
-export default function TipAmount({ tipPercentage, bill }) {
+export default function TipAmount({ tipPercentage, bill, peopleCount }) {
 
     function calculateTipAmount() {
-        return (tipPercentage * bill).toFixed(2);
+        if (peopleCount == '' || peopleCount == 0) {
+          return (tipPercentage * bill).toFixed(2);
+        }
+        return ((tipPercentage * bill) / peopleCount).toFixed(2);
       }
 
     return (

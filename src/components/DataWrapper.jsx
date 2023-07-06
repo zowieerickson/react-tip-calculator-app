@@ -10,7 +10,7 @@ import ResetButton from "./Button"
 
 export default function DataWrapper() {
     const [bill, setBill] = useState('')
-    const [peopleCount, setPeopleCount] = useState('')
+    const [peopleCount, setPeopleCount] = useState(1)
     const [tipPercentage, setTipPercentage] = useState(0)
     const [customTip, setCustomTip] = useState('')
 
@@ -58,6 +58,7 @@ export default function DataWrapper() {
                 <TipAmount
                     bill={bill}
                     tipPercentage={tipPercentage}
+                    peopleCount={peopleCount}
                 />
                 <Total 
                     bill={bill}
