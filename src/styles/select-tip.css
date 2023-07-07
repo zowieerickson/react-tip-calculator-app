@@ -1,7 +1,12 @@
+.tips .tip-title {
+    margin-bottom: 16px;
+}
+
 .tip-buttons-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    column-gap: 14px;
+    row-gap: 16px;
 }
 
 .tip-buttons {

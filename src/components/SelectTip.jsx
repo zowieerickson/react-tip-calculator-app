@@ -40,8 +40,8 @@ export default function SelectTip({
     }
   
     return (
-      <div>
-        <h3>Select Tip %</h3>
+      <div className="tips">
+        <h3 className="tip-title">Select Tip %</h3>
         <div className="tip-buttons-wrapper">
           <button className={`tip-buttons tip-percentage ${selectedButton === 1 && 'selected'}`}  
           onClick={(e) => {

@@ -10,9 +10,9 @@
 .calculation-container {
     display: flex;
     flex-direction: column;
+    padding: 13px 0 16px 3px;
     width: 100%;
     gap: 40px;
-    max-width: 379px;
 }
 
 .calculation-container h3 {
