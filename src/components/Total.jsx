@@ -5,12 +5,12 @@ export default function Total({ bill, tipPercentage, peopleCount }) {
     function calculateTotalPrice() {
         const tipPlusBill =  Number(bill) + Number((tipPercentage * bill).toFixed(2))
 
-            if (bill > 0 && peopleCount > 0) {
-                return (tipPlusBill / peopleCount ).toFixed(2)
-            }
-
-            if (bill > 0 && peopleCount == 0) {
+            if (peopleCount === '0') {
+                return (0).toFixed(2)
+            } else if (peopleCount == '') {
                 return (tipPlusBill).toFixed(2)
+            } else if (bill > 0 && peopleCount > 0) {
+                return (tipPlusBill / peopleCount ).toFixed(2)
             }
     }
 
