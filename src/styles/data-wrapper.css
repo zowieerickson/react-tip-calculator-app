@@ -29,8 +29,11 @@
     color: #E17457;
 }
 
-.error-input:focus {
+.error-border {
     outline: 2px solid #E17052;
+}
+
+.error-input:focus {
     caret-color: #E17052;
 }
 
