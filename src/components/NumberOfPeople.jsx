@@ -12,11 +12,11 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
         <div>
             <h3>Number of People {peopleCount === '0' && <span className="error-text">Can't be zero</span>}</h3>
             
-            <div className={`people-input ${peopleCount === '0' && "error-border"}`}>
+            <div className={`people-input`}>
                 <svg className="icon-input icon-person" />
                 <input 
                     onChange={handlePeopleCountChange}
-                    className={peopleCount === '0' ? "error-input" : ''}
+                    className={peopleCount === '0' ? "error-input error-border" : ''}
                     type="text"
                     value={peopleCount}
                     placeholder="1"

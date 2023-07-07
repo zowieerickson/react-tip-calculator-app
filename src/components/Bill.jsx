@@ -15,6 +15,7 @@ export default function Bill({ bill, onStateChangeBill, regexMoney }) {
                 <svg className="icon-input icon-dollar-sign" />
                 <input 
                     onChange={handleBillChange}
+                    className={`${bill === '.' && 'error-input'}`}
                     value={bill}
                     type="text"
                     placeholder="0"

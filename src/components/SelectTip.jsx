@@ -10,7 +10,6 @@ export default function SelectTip({
 
     const [selectedButton, setSelectedButton] = useState(null)
 
-    // 
     function handleClickSelectedButton(buttonId) {
       console.log(selectedButton)
       setSelectedButton(buttonId)
@@ -21,7 +20,6 @@ export default function SelectTip({
       onStateChangeCustomTip('');
       onStateChangeTipPercentage(e.target.value / 100);
     }
-    // 
   
     function handleClickAddTipCustom(e) {
       if (e.target.value === '' || regexMoney.test(e.target.value)) {
@@ -80,7 +78,7 @@ export default function SelectTip({
           </button>
           <input
             onChange={handleClickAddTipCustom}
-            className="tip-custom tip-percentage"
+            className={`tip-custom tip-percentage ${customTip === '.' && 'error-input'}`}
             type="text"
             placeholder="Custom"
             value={customTip}
