@@ -30,3 +30,8 @@
     opacity: 1;
     padding-right: 0;
 }
+
+.selected {
+    color: #00474B;
+    background: #26C2AE;
+}

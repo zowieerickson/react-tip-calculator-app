@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '../styles/select-tip.css'
 
 export default function SelectTip({
@@ -7,10 +8,25 @@ export default function SelectTip({
     regexMoney
   }) {
 
+    const [selectedButton, setSelectedButton] = useState(null)
+
+    // 
+    function handleClickSelectedButton(buttonId) {
+      console.log(selectedButton)
+      setSelectedButton(buttonId)
+    }
+
     function handleClickAddTip(e) {
+      console.log(customTip)
       onStateChangeCustomTip('');
       onStateChangeTipPercentage(e.target.value / 100);
     }
+
+    function composeClickHandlers(buttonId, onClick) {
+      handleClickSelectedButton(buttonId)
+      onClick()
+    }
+    // 
   
     function handleClickAddTipCustom(e) {
       if (e.target.value === '' || regexMoney.test(e.target.value)) {
@@ -27,20 +43,45 @@ export default function SelectTip({
       <div>
         <h3>Select Tip %</h3>
         <div className="tip-buttons-wrapper">
-          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="5">
-            5%
+          <button className={`tip-buttons tip-percentage ${selectedButton === 1 && 'selected'}`}  
+          onClick={(e) => {
+            handleClickSelectedButton(1)
+            handleClickAddTip(e)
+            }} 
+          value="5">
+          5%
           </button>
-          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="10">
-            10%
+          <button className={`tip-buttons tip-percentage ${selectedButton === 2 && 'selected'}`} 
+          onClick={(e) => {
+            handleClickSelectedButton(2)
+            handleClickAddTip(e)
+            }} 
+          value="10">
+          10%
           </button>
-          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="15">
-            15%
+          <button className={`tip-buttons tip-percentage ${selectedButton === 3 && 'selected'}`} 
+          onClick={(e) => {
+            handleClickSelectedButton(3)
+            handleClickAddTip(e)
+          }} 
+          value="15">
+          15%
           </button>
-          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="25">
-            25%
+          <button className={`tip-buttons tip-percentage ${selectedButton === 4 && 'selected'}`} 
+          onClick={(e) => {
+            handleClickSelectedButton(4)
+            handleClickAddTip(e)
+          }}
+          value="25">
+          25%
           </button>
-          <button className="tip-buttons tip-percentage" onClick={handleClickAddTip} value="50">
-            50%
+          <button className={`tip-buttons tip-percentage ${selectedButton === 5 && 'selected'}`} 
+          onClick={(e) => {
+            handleClickSelectedButton(5)
+            handleClickAddTip(e)
+          }}
+          value="50">
+          50%
           </button>
           <input
             onChange={handleClickAddTipCustom}
