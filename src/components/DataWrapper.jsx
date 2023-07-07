@@ -60,12 +60,14 @@ export default function DataWrapper() {
                     bill={bill}
                     tipPercentage={tipPercentage}
                     peopleCount={peopleCount}
+                    customTip={customTip}
                 />
-                <Total 
+                <Total
                     bill={bill}
                     tipPercentage={tipPercentage}
                     peopleCount={peopleCount}
-                />
+                    customTip={customTip}
+                    />
                 <ResetButton
                     bill={bill}
                     peopleCount={peopleCount}

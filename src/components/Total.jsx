@@ -1,11 +1,11 @@
 import '../styles/summary.css'
 
-export default function Total({ bill, tipPercentage, peopleCount }) {
+export default function Total({ bill, tipPercentage, peopleCount, customTip }) {
 
     function calculateTotalPrice() {
         const tipPlusBill =  Number(bill) + Number((tipPercentage * bill).toFixed(2))
 
-            if (peopleCount === '0') {
+            if (peopleCount === '0' || bill === '.' || customTip === '.') {
                 return (0).toFixed(2)
             } else if (peopleCount == '') {
                 return (tipPlusBill).toFixed(2)
