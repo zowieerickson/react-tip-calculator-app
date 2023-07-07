@@ -21,11 +21,6 @@ export default function SelectTip({
       onStateChangeCustomTip('');
       onStateChangeTipPercentage(e.target.value / 100);
     }
-
-    function composeClickHandlers(buttonId, onClick) {
-      handleClickSelectedButton(buttonId)
-      onClick()
-    }
     // 
   
     function handleClickAddTipCustom(e) {
