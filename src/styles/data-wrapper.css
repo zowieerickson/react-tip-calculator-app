@@ -23,20 +23,6 @@
     margin-bottom: 6px;
 }
 
-.error-text {
-    position: absolute;
-    right: 0;
-    color: #E17457;
-}
-
-.error-border {
-    outline: 2px solid #E17052;
-}
-
-.error-input:focus {
-    caret-color: #E17052;
-}
-
 .summary-container {
     width: 100%;
     padding: 40px;
