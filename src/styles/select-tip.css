@@ -24,15 +24,11 @@
     height: 48px;
 }
 
-.tip-custom {
-    color: #547878;
-}
-
 .tip-custom::placeholder {
     font-size: 22.7px;
     text-align: center;
     color: #547878;
-    opacity: 1;
+    opacity: .5;
     padding-right: 0;
 }
 
