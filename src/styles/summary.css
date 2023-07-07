@@ -24,6 +24,8 @@
 }
 
 .summary-amount {
+    max-width: 230px;
+    overflow: scroll;
     color: #26C2AE;
     font-size: 48px;
     letter-spacing: -1px;
