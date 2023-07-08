@@ -79,6 +79,9 @@ export default function SelectTip({
             onClick={() => {
               handleClickSelectedButton(6)
             }}
+            onBlur={() => {
+              handleClickSelectedButton(6)
+            }}
             onChange={handleClickAddTipCustom}
             type="text"
             placeholder="Custom"
