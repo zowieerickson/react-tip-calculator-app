@@ -34,7 +34,7 @@ export default function SelectTip({
       <div className="tips">
         <h3 className="tip-title">Select Tip %</h3>
         <div className="tip-buttons-wrapper">
-          <button className={`tip-buttons tip-percentage ${selectedButton === 1 && 'selected'}`}  
+          <button className={`tip-buttons tip-percentage ${selectedButton === 1 && 'selected-button'}`}  
           onClick={(e) => {
             handleClickSelectedButton(1)
             handleClickAddTip(e)
@@ -42,7 +42,7 @@ export default function SelectTip({
           value="5">
           5%
           </button>
-          <button className={`tip-buttons tip-percentage ${selectedButton === 2 && 'selected'}`} 
+          <button className={`tip-buttons tip-percentage ${selectedButton === 2 && 'selected-button'}`} 
           onClick={(e) => {
             handleClickSelectedButton(2)
             handleClickAddTip(e)
@@ -50,7 +50,7 @@ export default function SelectTip({
           value="10">
           10%
           </button>
-          <button className={`tip-buttons tip-percentage ${selectedButton === 3 && 'selected'}`} 
+          <button className={`tip-buttons tip-percentage ${selectedButton === 3 && 'selected-button'}`} 
           onClick={(e) => {
             handleClickSelectedButton(3)
             handleClickAddTip(e)
@@ -58,7 +58,7 @@ export default function SelectTip({
           value="15">
           15%
           </button>
-          <button className={`tip-buttons tip-percentage ${selectedButton === 4 && 'selected'}`} 
+          <button className={`tip-buttons tip-percentage ${selectedButton === 4 && 'selected-button'}`} 
           onClick={(e) => {
             handleClickSelectedButton(4)
             handleClickAddTip(e)
@@ -66,7 +66,7 @@ export default function SelectTip({
           value="25">
           25%
           </button>
-          <button className={`tip-buttons tip-percentage ${selectedButton === 5 && 'selected'}`} 
+          <button className={`tip-buttons tip-percentage ${selectedButton === 5 && 'selected-button'}`} 
           onClick={(e) => {
             handleClickSelectedButton(5)
             handleClickAddTip(e)
@@ -74,9 +74,11 @@ export default function SelectTip({
           value="50">
           50%
           </button>
-          <input
+          <input className={`tip-custom tip-percentage ${customTip === '.' && 'error-input'}`}
+            onClick={() => {
+              handleClickSelectedButton(6)
+            }}
             onChange={handleClickAddTipCustom}
-            className={`tip-custom tip-percentage ${customTip === '.' && 'error-input'}`}
             type="text"
             placeholder="Custom"
             value={customTip}
