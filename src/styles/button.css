@@ -21,6 +21,11 @@ button:disabled {
     background: #0D686D;
 }
 
+button:focus, p:focus {
+    outline: 4px solid #26C2AE;
+    outline-offset: 1px;
+}
+
 .reset {
     margin-top: auto;
     text-transform: uppercase;
