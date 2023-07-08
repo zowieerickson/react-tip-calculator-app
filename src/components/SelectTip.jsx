@@ -33,7 +33,7 @@ export default function SelectTip({
   
     return (
       <div className="tips">
-        <label for="select-tip" className="tip-title">Select Tip %</label>
+        <label htmlFor="select-tip" className="tip-title">Select Tip %</label>
         <div className="tip-buttons-wrapper">
           <button className={`tip-buttons tip-percentage ${selectedButton === 1 && 'selected-button'}`}  
           onClick={(e) => {
@@ -82,7 +82,7 @@ export default function SelectTip({
             onChange={handleClickAddTipCustom}
             type="text"
             placeholder="Custom"
-            inputmode="decimal"
+            inputMode="decimal"
             value={customTip}
             id="select-tip"
             name="select-tip"
