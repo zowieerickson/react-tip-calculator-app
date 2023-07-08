@@ -9,10 +9,16 @@
     row-gap: 16px;
 }
 
+@media screen and (max-width: 734px) {
+    .tip-buttons-wrapper {
+        column-gap: 16.5px;
+    }
+}
+
 .tip-buttons {
     background: #00474B;
     color: #FFF;
-    font-size: 23px;
+    font-size: 24px;
 }
 
 .tip-buttons:active {
@@ -22,6 +28,12 @@
 .tip-percentage {
     width: 117px;
     height: 48px;
+}
+
+@media screen and (max-width: 734px) {
+    .tip-percentage {
+        width: 46.7%;
+    }
 }
 
 .tip-custom::placeholder {

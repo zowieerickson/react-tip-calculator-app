@@ -11,12 +11,10 @@ export default function SelectTip({
     const [selectedButton, setSelectedButton] = useState(null)
 
     function handleClickSelectedButton(buttonId) {
-      console.log(selectedButton)
       setSelectedButton(buttonId)
     }
 
     function handleClickAddTip(e) {
-      console.log(customTip)
       onStateChangeCustomTip('');
       onStateChangeTipPercentage(e.target.value / 100);
     }

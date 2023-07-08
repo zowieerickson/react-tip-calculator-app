@@ -26,3 +26,9 @@ button:disabled {
     text-transform: uppercase;
     padding: 9px 40px;
 }
+
+@media screen and (max-width: 734px) {
+    .reset {
+        margin-top: 32px;
+    }
+}

@@ -1,13 +1,17 @@
-.summary-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 
 .summary-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 349px) {
+    .summary-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .summary-row-title {
@@ -16,6 +20,12 @@
     align-items: flex-start;
     color: #FFF;
     font-size: 16px;
+}
+
+@media screen and (max-width: 734px) {
+    .summary-row-title {
+        text-align: left;
+    }
 }
 
 .summary-row-subhead {
@@ -31,6 +41,12 @@
     letter-spacing: -1px;
 }
 
+@media screen and (max-width: 734px) {
+    .summary-amount {
+        max-width: 179px;
+        font-size: 32px;
+    }
+}
 .total {
     margin-top: 25px;
 }

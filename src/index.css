@@ -72,6 +72,14 @@ input:focus {
   color: #E17457;
 }
 
+@media screen and (max-width: 374px) {
+  .error-text {
+    position: absolute;
+    bottom: -83px;
+    left: 0;
+  }
+}
+
 .error-input {
   outline: 2px solid #E17052;
 }
