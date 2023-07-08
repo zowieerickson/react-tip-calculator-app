@@ -18,6 +18,7 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
                     onChange={handlePeopleCountChange}
                     className={peopleCount === '0' ? "error-input error-border" : ''}
                     type="text"
+                    inputmode="numeric"
                     value={peopleCount}
                     placeholder="1"
                     name="" 
