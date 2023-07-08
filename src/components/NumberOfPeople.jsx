@@ -10,7 +10,7 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
 
     return (
         <div>
-            <h3>Number of People {peopleCount === '0' && <span className="error-text">Can't be zero</span>}</h3>
+            <label for="number-of-people" >Number of People {peopleCount === '0' && <span className="error-text">Can't be zero</span>}</label>
             
             <div className={`people-input`}>
                 <svg className="icon-input icon-person" />
@@ -21,8 +21,8 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
                     inputmode="numeric"
                     value={peopleCount}
                     placeholder="1"
-                    name="" 
-                    id="" 
+                    name="number-of-people" 
+                    id="number-of-people" 
                 />
             </div>
         </div>

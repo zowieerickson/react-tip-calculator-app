@@ -10,7 +10,7 @@ export default function Bill({ bill, onStateChangeBill, regexMoney }) {
 
     return (
         <div>
-            <h3>Bill</h3>
+            <label for="bill">Bill</label>
             <div className="bill-input">
                 <svg className="icon-input icon-dollar-sign" />
                 <input 
@@ -20,8 +20,8 @@ export default function Bill({ bill, onStateChangeBill, regexMoney }) {
                     type="text"
                     inputmode="decimal"
                     placeholder="0"
-                    name=""
-                    id="" 
+                    name="bill"
+                    id="bill" 
                 />
             </div>
         </div>

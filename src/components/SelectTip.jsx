@@ -33,7 +33,7 @@ export default function SelectTip({
   
     return (
       <div className="tips">
-        <h3 className="tip-title">Select Tip %</h3>
+        <label for="select-tip" className="tip-title">Select Tip %</label>
         <div className="tip-buttons-wrapper">
           <button className={`tip-buttons tip-percentage ${selectedButton === 1 && 'selected-button'}`}  
           onClick={(e) => {
@@ -84,8 +84,8 @@ export default function SelectTip({
             placeholder="Custom"
             inputmode="decimal"
             value={customTip}
-            name=""
-            id=""
+            id="select-tip"
+            name="select-tip"
           />
         </div>
       </div>
