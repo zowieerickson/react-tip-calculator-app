@@ -19,7 +19,7 @@ export default function DataWrapper() {
     const regexNumbersOnly = /^(0|[1-9]\d*)$/;
     const regexMoney = /^(?!0\d)\d*(\.\d{0,2})?$/
 
-    // Handle state change, passing to child component. Let's lift this state up
+    // Lifting State
     const handleStateChangeBill = (newValue) => {
         setBill(newValue)
     }

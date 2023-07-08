@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../styles/select-tip.css'
 
 export default function SelectTip({
