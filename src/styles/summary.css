@@ -32,11 +32,18 @@
 }
 
 .summary-amount {
-    max-width: 230px;
+    max-width: 228px;
     overflow: scroll;
     color: #26C2AE;
     font-size: 48px;
     letter-spacing: -1px;
+}
+
+@media screen and (max-width: 920px) {
+    .summary-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media screen and (max-width: 734px) {

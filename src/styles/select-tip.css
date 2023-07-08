@@ -26,11 +26,23 @@
 }
 
 .tip-percentage {
-    width: 117px;
+    width: 30.87%;
     height: 48px;
 }
 
+@media screen and (max-width: 920px) {
+    .tip-percentage {
+        width: 47%;
+    }
+}
+
 @media screen and (max-width: 734px) {
+    .tip-percentage {
+        width: 46.7%;
+    }
+}
+
+@media screen and (max-width: 500px) {
     .tip-percentage {
         width: 46.7%;
     }
