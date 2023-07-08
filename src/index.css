@@ -76,7 +76,7 @@ input:focus {
   .error-text {
     position: absolute;
     bottom: -83px;
-    left: 0;
+    right: 0;
   }
 }
 
