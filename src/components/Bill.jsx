@@ -18,7 +18,7 @@ export default function Bill({ bill, onStateChangeBill, regexMoney }) {
                     className={`${bill === '.' && 'error-input'}`}
                     value={bill}
                     type="text"
-                    inputmode="numeric"
+                    inputmode="decimal"
                     placeholder="0"
                     name=""
                     id="" 

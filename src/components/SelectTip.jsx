@@ -82,7 +82,7 @@ export default function SelectTip({
             onChange={handleClickAddTipCustom}
             type="text"
             placeholder="Custom"
-            inputmode="numeric"
+            inputmode="decimal"
             value={customTip}
             name=""
             id=""
