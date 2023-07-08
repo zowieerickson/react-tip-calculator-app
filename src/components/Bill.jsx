@@ -12,7 +12,7 @@ export default function Bill({ bill, onStateChangeBill, regexMoney }) {
         <div>
             <label htmlFor="bill">Bill</label>
             <div className="bill-input">
-                <svg className="icon-input icon-dollar-sign" />
+                <svg aria-hidden="true" className="icon-input icon-dollar-sign" />
                 <input 
                     onChange={handleBillChange}
                     className={`${bill === '.' && 'error-input'}`}

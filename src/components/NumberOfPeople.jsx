@@ -13,7 +13,7 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
             <label htmlFor="number-of-people" >Number of People {peopleCount === '0' && <span className="error-text">Can't be zero</span>}</label>
             
             <div className={`people-input`}>
-                <svg className="icon-input icon-person" />
+                <svg aria-hidden="true" className="icon-input icon-person" />
                 <input 
                     onChange={handlePeopleCountChange}
                     className={peopleCount === '0' ? "error-input error-border" : ''}
