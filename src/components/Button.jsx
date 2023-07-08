@@ -8,12 +8,23 @@ function Button({buttonClass, onClick, children, disabled=true }) {
     )
 }
 
-export default function ResetButton({ bill, peopleCount, tipPercentage, onStateChangeBill, onStateChangePeopleCount, onStateChangeTipPercentage, onStateChangeCustomTip, disabled }) {
+export default function ResetButton({
+    bill,
+    peopleCount,
+    tipPercentage,
+    onStateChangeBill,
+    onStateChangePeopleCount,
+    onStateChangeTipPercentage,
+    onStateChangeCustomTip,
+    onStateChangeSelectedButton,
+    disabled 
+}) {
     function handleOnClickReset() {
         onStateChangeBill('')
         onStateChangePeopleCount('')
         onStateChangeTipPercentage(0)
         onStateChangeCustomTip('')
+        onStateChangeSelectedButton(null)
     }
 
     if (bill !== '' || tipPercentage !== 0  || peopleCount != '') {

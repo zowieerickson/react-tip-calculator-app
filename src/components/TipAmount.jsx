@@ -1,6 +1,11 @@
 import '../styles/summary.css'
 
-export default function TipAmount({ tipPercentage, bill, peopleCount, customTip }) {
+export default function TipAmount({
+    tipPercentage,
+    bill,
+    peopleCount,
+    customTip 
+  }) {
 
     function calculateTipAmount() {
         if (peopleCount === '0' || bill === '.' || customTip === '.') {

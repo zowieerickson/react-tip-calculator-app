@@ -13,6 +13,8 @@ export default function DataWrapper() {
     const [peopleCount, setPeopleCount] = useState('')
     const [tipPercentage, setTipPercentage] = useState(0)
     const [customTip, setCustomTip] = useState('')
+    const [selectedButton, setSelectedButton] = useState(null)
+
 
     const regexNumbersOnly = /^(0|[1-9]\d*)$/;
     const regexMoney = /^(?!0\d)\d*(\.\d{0,2})?$/
@@ -33,6 +35,10 @@ export default function DataWrapper() {
     const handleStateChangePeopleCount = (newValue) => {
         setPeopleCount(newValue)
     }
+
+    const handleStateChangeSelectedButton = (newValue) => {
+        setSelectedButton(newValue)
+    }
     // End of lifting State
 
     return (
@@ -47,6 +53,8 @@ export default function DataWrapper() {
                     onStateChangeTipPercentage={handleStateChangeTipPercentage}
                     customTip={customTip} 
                     onStateChangeCustomTip={handleStateChangeCustomTip}
+                    selectedButton={selectedButton}
+                    onStateChangeSelectedButton={handleStateChangeSelectedButton}
                     regexMoney={regexMoney}
                 />
                 <NumberOfPeople
@@ -77,6 +85,7 @@ export default function DataWrapper() {
                     onStateChangePeopleCount={handleStateChangePeopleCount}
                     onStateChangeTipPercentage={handleStateChangeTipPercentage}
                     onStateChangeCustomTip={handleStateChangeCustomTip}
+                    onStateChangeSelectedButton={handleStateChangeSelectedButton}
                 />
             </div>
         </section>

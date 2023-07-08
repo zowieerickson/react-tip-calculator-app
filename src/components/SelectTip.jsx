@@ -5,13 +5,14 @@ export default function SelectTip({
     customTip,
     onStateChangeCustomTip,
     onStateChangeTipPercentage,
+    selectedButton,
+    onStateChangeSelectedButton,
     regexMoney
   }) {
 
-    const [selectedButton, setSelectedButton] = useState(null)
 
     function handleClickSelectedButton(buttonId) {
-      setSelectedButton(buttonId)
+      onStateChangeSelectedButton(buttonId)
     }
 
     function handleClickAddTip(e) {
