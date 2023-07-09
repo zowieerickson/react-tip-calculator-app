@@ -6,7 +6,7 @@ function App() {
 
   return (
     <main className="calculator-wrapper">
-      <img className="logo" width="87px" height="54px" src={Logo} alt="Splitter app logo" />
+      <img className="logo" width="87" height="54" src={Logo} alt="Splitter app logo" />
       <DataWrapper />
     </main>
   )

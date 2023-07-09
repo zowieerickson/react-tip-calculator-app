@@ -42,7 +42,7 @@ export default function DataWrapper() {
     // End of lifting State
 
     return (
-        <section className="tip-calculator">
+        <div className="tip-calculator">
             <section className="calculation-container">
                 <Bill 
                     bill={bill}
@@ -88,6 +88,6 @@ export default function DataWrapper() {
                     onStateChangeSelectedButton={handleStateChangeSelectedButton}
                 />
             </section>
-        </section>
+        </div>
     )
 }
