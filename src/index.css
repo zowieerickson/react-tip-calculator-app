@@ -12,11 +12,32 @@
   -webkit-text-size-adjust: 100%;
 }
 
-* {
+/* CSS Reset */
+*, *::before, *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
+
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+/* End of CSS Reset */
 
 body {
   margin: 0;
@@ -44,8 +65,8 @@ input {
   text-align: right;
   font-size: 24px;
   font-weight: 700;
-  text-indent: 17px;
   padding-right: 17px;
+  text-indent: 15.6px;
 }
 
 input::placeholder {

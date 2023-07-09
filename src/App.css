@@ -5,12 +5,11 @@
 }
 
 .logo {
-  margin-bottom: 68px;
+  margin: 0px auto 68px;
 }
 
 @media screen and (max-width: 734px) {
   .logo {
-      margin-top: 50px;
-      margin-bottom: 40px;
+      margin: 50px auto 40px;
   }
 }

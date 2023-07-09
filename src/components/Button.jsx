@@ -32,7 +32,7 @@ export default function ResetButton({
     }
 
     return (
-        <Button buttonClass="reset" onClick={handleOnClickReset} disabled={disabled}>
+        <Button buttonClass="btn reset" onClick={handleOnClickReset} disabled={disabled}>
             Reset
         </Button>
     )
