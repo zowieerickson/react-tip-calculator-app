@@ -3,14 +3,23 @@
 }
 
 .tip-buttons-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     column-gap: 14px;
     row-gap: 16px;
 }
 
-@media screen and (max-width: 734px) {
+@media screen and (min-width: 735px) and (max-width: 920px) {
     .tip-buttons-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16.5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tip-buttons-wrapper {
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 16.5px;
     }
 }
@@ -21,31 +30,12 @@
     font-size: 24px;
 }
 
+.tip-percentage {
+    height: 46px;
+}
+
 .tip-buttons:active {
     color: #00474B;
-}
-
-.tip-percentage {
-    width: 30.87%;
-    height: 48px;
-}
-
-@media screen and (max-width: 920px) {
-    .tip-percentage {
-        width: 47%;
-    }
-}
-
-@media screen and (max-width: 734px) {
-    .tip-percentage {
-        width: 46.7%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .tip-percentage {
-        width: 46.7%;
-    }
 }
 
 .tip-custom::placeholder {
