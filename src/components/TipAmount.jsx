@@ -19,6 +19,7 @@ export default function TipAmount({
 
     return (
       <section className="summary-row tip">
+        <h2 className="visuallyhidden">Tip amount total per person</h2>
         <p className="summary-row-title">Tip Amount <span className="summary-row-subhead">/ person</span></p>
         <p className="summary-amount">${calculateTipAmount()}</p>
       </section>

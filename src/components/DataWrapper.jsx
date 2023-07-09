@@ -44,6 +44,7 @@ export default function DataWrapper() {
     return (
         <div className="tip-calculator">
             <section className="calculation-container">
+                <h2 className="visuallyhidden">Calculation section</h2>
                 <Bill 
                     bill={bill}
                     onStateChangeBill={handleStateChangeBill}
@@ -64,6 +65,7 @@ export default function DataWrapper() {
                 />
             </section>
             <section className="summary-container">
+                <h2 className="visuallyhidden">Summary of totals</h2>
                 <TipAmount
                     bill={bill}
                     tipPercentage={tipPercentage}
