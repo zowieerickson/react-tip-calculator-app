@@ -9,7 +9,7 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
     }
 
     return (
-        <div>
+        <section>
             <label htmlFor="number-of-people" >Number of People {peopleCount === '0' && <span className="error-text">Can't be zero</span>}</label>
             
             <div className={`people-input`}>
@@ -25,7 +25,7 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
                     id="number-of-people" 
                 />
             </div>
-        </div>
+        </section>
     )
 }
 

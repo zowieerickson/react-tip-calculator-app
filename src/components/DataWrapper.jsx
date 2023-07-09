@@ -43,7 +43,7 @@ export default function DataWrapper() {
 
     return (
         <section className="tip-calculator">
-            <div className="calculation-container">
+            <section className="calculation-container">
                 <Bill 
                     bill={bill}
                     onStateChangeBill={handleStateChangeBill}
@@ -62,8 +62,8 @@ export default function DataWrapper() {
                     onStateChangePeopleCount={handleStateChangePeopleCount}
                     regexNumbersOnly={regexNumbersOnly}
                 />
-            </div>
-            <div className="summary-container">
+            </section>
+            <section className="summary-container">
                 <TipAmount
                     bill={bill}
                     tipPercentage={tipPercentage}
@@ -87,7 +87,7 @@ export default function DataWrapper() {
                     onStateChangeCustomTip={handleStateChangeCustomTip}
                     onStateChangeSelectedButton={handleStateChangeSelectedButton}
                 />
-            </div>
+            </section>
         </section>
     )
 }

@@ -31,7 +31,7 @@ export default function SelectTip({
     }
   
     return (
-      <div className="tips">
+      <section className="tips">
         <label htmlFor="select-tip" className="tip-title">Select Tip %</label>
         <div className="tip-buttons-wrapper">
           <button className={`tip-buttons tip-percentage ${selectedButton === 1 && 'selected-button'}`}  
@@ -90,6 +90,6 @@ export default function SelectTip({
             name="select-tip"
           />
         </div>
-      </div>
+      </section>
     );
   }
