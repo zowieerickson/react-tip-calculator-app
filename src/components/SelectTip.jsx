@@ -32,7 +32,7 @@ export default function SelectTip({
   
     return (
       <section className="tips">
-        <label htmlFor="select-tip" className="tip-title">Select Tip %</label>
+        <label role="heading" htmlFor="select-tip" className="tip-title">Select Tip %</label>
         <div className="tip-buttons-wrapper">
           <button className={`tip-buttons tip-percentage ${selectedButton === 1 && 'selected-button'}`}  
           onClick={(e) => {

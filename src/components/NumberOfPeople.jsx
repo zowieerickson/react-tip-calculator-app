@@ -10,7 +10,7 @@ export default function NumberOfPeople({ peopleCount, onStateChangePeopleCount, 
 
     return (
         <section>
-            <label htmlFor="number-of-people" >Number of People {peopleCount === '0' && <span className="error-text">Can't be zero</span>}</label>
+            <label role="heading" htmlFor="number-of-people" >Number of People {peopleCount === '0' && <span className="error-text">Can't be zero</span>}</label>
             
             <div className={`people-input`}>
                 <svg aria-hidden="true" className="icon-input icon-person" />
