@@ -25,6 +25,8 @@ Users should be able to:
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
+- See error messages or error states in the UI when inputing ```0``` in the "Number of People" input or only ```.``` in the "Custom tip" and "Bill" inputs
+- Navigate through the app with just a keyboard for accessibility
 
 ### Screenshot
 
