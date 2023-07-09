@@ -10,7 +10,8 @@ export default function Bill({ bill, onStateChangeBill, regexMoney }) {
 
     return (
         <section>
-            <label role="heading" htmlFor="bill">Bill</label>
+            <h2 className="visuallyhidden">Bill</h2>
+            <label htmlFor="bill">Bill</label>
             <div className="bill-input">
                 <svg aria-hidden="true" className="icon-input icon-dollar-sign" />
                 <input
