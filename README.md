@@ -15,7 +15,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -33,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [](https://erickson-tip-calculator-app.netlify.app/)
+- Live Site URL: [https://erickson-tip-calculator-app.netlify.app/](https://erickson-tip-calculator-app.netlify.app/)
 
 ## My process
 
@@ -43,7 +42,7 @@ Users should be able to:
 - CSS3
 - Flexbox
 - CSS Grid
-- [Open Graph](https://ogp.me/) - Internet protocol to standardize the use of metadata within a webpage to represent the content of a page
+- [Open Graph](https://ogp.me/) - Internet protocol
 - [React](https://react.dev/) - JS library
 - [Vite](https://vitejs.dev/) - Build tool
 
@@ -60,21 +59,18 @@ Users should be able to:
     3. Sufficient color contrast 
 
 
-Before I began this project, I didn't expect to learn so many things. From important React concepts, implementing Open Graph for rich previews on social networks, and making the app more accessible, some personal experience points were definitely gained thanks to this project.
+Before starting this project, I didn't expect to go as deep as I actually did. Through exploring essential React concepts, implementing Open Graph for captivating social network previews, and enhancing the app's accessibility, this project opened the door for me to explore many new ideas.
 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+This project really highlighted the importance of user experience and accessibility that I look to carry to future projects. In prior projects, I did not put as much emphasis as I could have on accessibility, like being able to navigate the site with only a keyboard. Focusing more on the mobile user experience is something I always strive to improve on. Adding ```inputMode``` into your site is something that I would argue it creates a noticablly seamless mobile user experience. For instance, if a user is clicking into an input box where they're expecting to just type integers, but the app opens to the default ABC keyboard instead of the numeric keyboard, it creates a very cumbersome experience for the user.
 
 ### Useful resources
 
-- [Example resource 1](https://dequeuniversity.com/rules/axe/4.6/color-contrast) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Deque University](https://dequeuniversity.com/rules/axe/4.6/color-contrast) - I found this resource as I was testing accessibility of the app with Google Lighthouse. This helped me tweak my colors to achieve sufficient contrast to meet the WCAG 2 AAA contrast ratio threshold. It's a great resource for anyone looking to make their websites more accessible.
+- [freeCodeCamp/what-is-open-graph](https://www.freecodecamp.org/news/what-is-open-graph-and-how-can-i-use-it-for-my-website/#what-is-open-graph) - This is an amazing article from freeCodeCamp that helped me learn how to include Open Graph with my project. I'd recommend it to anyone looking to have rich previews when sharing their project URLs on social media.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
